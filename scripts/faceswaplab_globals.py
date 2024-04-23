@@ -3,7 +3,9 @@ from modules import scripts
 
 # Defining the absolute path for the 'faceswaplab' directory inside 'models' directory
 #MODELS_DIR = os.path.abspath(os.path.join("models", "faceswaplab"))
-MODELS_DIR = "/workspace/sd/stable-diffusion-webui/extensions/sd-webui-faceswaplab/models"
+MODELS_DIR = os.path.join(
+    scripts.basedir(), "extensions", "sd-webui-faceswaplab", "models"
+)
 
 # Defining the absolute path for the 'analysers' directory inside 'MODELS_DIR'
 ANALYZER_DIR = os.path.abspath(os.path.join(MODELS_DIR, "analysers"))
